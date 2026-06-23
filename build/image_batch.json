@@ -1,0 +1,22 @@
+[
+  {"type":"image","out":"assets/gen/ph_cover.png","ar":"16:9",
+   "prompt":"A deep gloss-blue sporty performance pickup truck towing a sleek enclosed twin-axle aluminium car-transport trailer along a quiet British motorway at blue hour, low three-quarter rear tracking angle, wet tarmac reflections, distant city lights, photoreal cinematic automotive photography, atmospheric, muted brand-aligned palette of deep teal, warm amber and ink, shallow cinematic depth, no people, NO TEXT, NO LOGOS, NO CAPTIONS."},
+
+  {"type":"image","out":"assets/gen/ph_loading.png","ar":"4:3",
+   "prompt":"A dark prestige saloon being carefully loaded into a fully enclosed aluminium car-transport trailer with its rear ramp lowered, low dramatic angle looking into the lit interior of the trailer, dusk dealership forecourt, photoreal cinematic photography, shallow depth of field, muted palette of deep teal, warm amber and ink, no people visible, NO TEXT, NO LOGOS, NO CAPTIONS."},
+
+  {"type":"image","out":"assets/gen/ph_forecourt.png","ar":"16:9",
+   "prompt":"A premium car dealership forecourt in the North West of England lined with clean prestige cars, soft overcast morning light, wet reflective paving, modern glass showroom softly out of focus behind, photoreal documentary automotive photography, muted brand-aligned palette, cinematic depth, no people, NO TEXT, NO LOGOS, NO CAPTIONS."},
+
+  {"type":"image","out":"assets/gen/ph_enclosed.png","ar":"16:9",
+   "prompt":"A professional enclosed twin-axle aluminium car-transport trailer, doors closed, dramatic side profile, parked on a dark studio-like apron with moody rim lighting, photoreal cinematic product photography, muted palette of deep teal and ink with a warm amber highlight, cinematic depth, no people, NO TEXT, NO LOGOS, NO CAPTIONS."},
+
+  {"type":"image","out":"assets/gen/ph_open.png","ar":"16:9",
+   "prompt":"An open multi-car transporter trailer loaded with two clean cars, side three-quarter view in bright clean daylight on a quiet industrial road, photoreal documentary automotive photography, muted brand-aligned palette, cinematic depth, no people, NO TEXT, NO LOGOS, NO CAPTIONS."},
+
+  {"type":"image","out":"assets/gen/ph_detail.png","ar":"4:3",
+   "prompt":"Extreme close-up detail of a wheel strap and ratchet securing the alloy wheel of a deep blue performance pickup truck inside a transporter, soft directional light, shallow depth of field, photoreal cinematic macro photography, muted palette of deep teal, warm amber and ink, no people, NO TEXT, NO LOGOS, NO CAPTIONS."},
+
+  {"type":"image","out":"assets/gen/ph_legacy.png","ar":"16:9",
+   "prompt":"A deep gloss-blue performance pickup truck and its enclosed car-transport trailer parked on an empty road at blue hour, cinematic wide hero shot with dramatic sky and soft reflections, lots of negative space on the left for text overlay, photoreal cinematic automotive photography, atmospheric, muted palette of deep teal, warm amber and ink, no people, NO TEXT, NO LOGOS, NO CAPTIONS."}
+]

@@ -1,0 +1,13 @@
+# secrets — never commit
+build/.env
+.env
+
+# dependencies
+node_modules/
+
+# QA / build artefacts
+build/assets/shots/
+
+# macOS
+.DS_Store
+**/.DS_Store

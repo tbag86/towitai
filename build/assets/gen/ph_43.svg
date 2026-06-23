@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0F1E23"/><stop offset="1" stop-color="#0A4F4E"/>
+  </linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#g)"/>
+  <text x="600" y="444" fill="#EDE9DF" font-family="Lato,Arial,sans-serif" font-size="30" font-weight="700" letter-spacing="6" text-anchor="middle" opacity="0.82">PHOTO · 4:3</text>
+  <text x="600" y="484" fill="#6FD0CC" font-family="Lato,Arial,sans-serif" font-size="13" letter-spacing="3" text-anchor="middle" opacity="0.7">PLACEHOLDER · replace via gen_media.py</text>
+</svg>

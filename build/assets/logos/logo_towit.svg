@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 50">
+  <rect x="0" y="3" width="44" height="44" rx="11" fill="#0C6E6C"/>
+  <path d="M13 15 L24 25 L13 35" fill="none" stroke="#FBF9F4" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 15 L35 25 L24 35" fill="none" stroke="#6FD0CC" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="56" y="37" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="800" letter-spacing="-1.2"><tspan fill="#15252B">towit</tspan><tspan fill="#0C6E6C">.ai</tspan></text>
+</svg>

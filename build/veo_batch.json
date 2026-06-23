@@ -1,0 +1,7 @@
+[
+  {"type":"veo","out":"assets/video/veo_cover.mp4","ar":"16:9",
+   "prompt":"One continuous slow tracking shot moving alongside a deep gloss-blue sporty performance pickup truck as it tows a sleek enclosed twin-axle aluminium car-transport trailer along a quiet British motorway at blue hour. Smooth steady motion, wet tarmac reflections, distant city lights, gentle headlight glow, confident and premium mood. Photoreal cinematic automotive cinematography, muted palette of deep teal, warm amber and ink, no people, NO TEXT, NO CAPTIONS, NO LOGOS."},
+
+  {"type":"veo","out":"assets/video/veo_moment.mp4","ar":"16:9","fast":true,
+   "prompt":"A slow push-in on hands tightening a wheel strap securing a car inside a fully enclosed transport trailer, warm directional light, shallow depth of field, calm and precise mood, photoreal cinematic detail cinematography, muted palette of deep teal and warm amber, NO TEXT, NO CAPTIONS, NO LOGOS."}
+]
