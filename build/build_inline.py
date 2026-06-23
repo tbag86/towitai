@@ -5,8 +5,11 @@ producing a single self-contained presentation/index.html that works anywhere
 import os, re, base64, sys
 
 BUILD = os.path.dirname(os.path.abspath(__file__))
-SRC = os.path.join(BUILD, "deck.html")
-OUT = os.path.abspath(os.path.join(BUILD, "..", "presentation", "index.html"))
+# Optional args: build_inline.py [src_deck.html] [out_index.html]
+# Asset paths inside the HTML are always resolved relative to BUILD, so the
+# source deck can live anywhere (e.g. build/clients/<slug>/deck.html).
+SRC = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.join(BUILD, "deck.html")
+OUT = os.path.abspath(sys.argv[2]) if len(sys.argv) > 2 else os.path.abspath(os.path.join(BUILD, "..", "presentation", "index.html"))
 
 def mime(path, data):
     if data[:4] == b"\x89PNG": return "image/png"

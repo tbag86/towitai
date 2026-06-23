@@ -1,0 +1,4 @@
+{
+  "home": "williams",
+  "_note": "'home' is the client served at the site root (/). Every client is also served at /<slug>."
+}

@@ -1,0 +1,13 @@
+{
+  "slug": "CHANGE-ME-lowercase-no-spaces",
+  "name": "Dealership Display Name",
+  "date": "June 2026",
+  "logo": "assets/clients/CHANGE-ME/logo.svg",
+  "logo_url": "OPTIONAL — a direct URL to the dealer's logo (svg/png). If set, --gen downloads it. Otherwise drop the file at the 'logo' path yourself.",
+  "logo_chip": "",
+  "_logo_chip_note": "Use \"\" for a dark/colour logo (sits on a cream chip). Use \"ink\" for a white/light logo (sits on a dark chip).",
+  "showroom_image": "assets/clients/CHANGE-ME/showroom.png",
+  "showroom_video": "assets/clients/CHANGE-ME/showroom.mp4",
+  "showroom_prompt": "A premium <brand>-style automotive dealership showroom exterior, expansive glass frontage, polished forecourt with clean prestige cars, soft overcast light, wet reflective paving, upmarket architecture, photoreal, muted palette of deep teal/amber/ink, no people, NO TEXT, NO LOGOS, NO BADGES, NO CAPTIONS.",
+  "showroom_motion_prompt": "Continue this exact scene in motion. Keep the building and cars identical to the photo. Very slow, smooth cinematic camera push-in, soft reflections, calm premium mood. NO TEXT, NO CAPTIONS, NO new logos."
+}

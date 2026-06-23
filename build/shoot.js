@@ -5,7 +5,8 @@ function pw(){ try{return require('playwright');}catch(_){return require('/usr/l
   const { chromium } = pw();
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 1 });
-  const url = 'file://' + path.resolve(__dirname, 'deck.html');
+  const deckArg = process.argv[2] || '../site/williams/index.html'; // pass a built client: ../site/<slug>/index.html
+  const url = 'file://' + path.resolve(__dirname, deckArg);
   await page.goto(url, { waitUntil: 'networkidle' });
   await page.waitForTimeout(1500);
   const n = await page.evaluate(() => document.querySelectorAll('.slide').length);

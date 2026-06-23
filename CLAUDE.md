@@ -8,6 +8,15 @@ The goal every time: a deck that looks like it came from a top design studio —
 cinematic* — and the **opposite of a generic AI/Gamma/template deck**. Every slide is a *designed*
 slide. There are no bare image dumps and no clip-art.
 
+> **Multi-dealership system (read `CLIENTS.md`).** This repo is now templated: one shared layout
+> (`build/template.deck.html`) + one JSON per dealership (`build/clients/<slug>.json`) → a deck per
+> dealer at `/<slug>`. The towit kit (Ford Ranger MS-RT + Brian James trailers, towit logo, service
+> copy) is baked into the template and stays stable; only the dealer name, logo and showroom
+> image/video change. Make a new one with **"create a version for <dealer>"**, or
+> `python3 build/new_client.py <slug>` → `python3 build/build_client.py <slug> --gen`. The
+> single-file `build/deck.html` workflow below is superseded by this — the design-system notes still
+> apply to `template.deck.html`.
+
 ---
 
 ## 1. How the system is structured

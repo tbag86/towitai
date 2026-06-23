@@ -1,0 +1,12 @@
+{
+  "slug": "williams",
+  "name": "Williams Group",
+  "date": "June 2026",
+  "logo": "assets/clients/williams/logo.svg",
+  "logo_url": "https://d2638j3z8ek976.cloudfront.net/a7c447e46d1b035712284410385b38685921f393/1776079412/images/badges/svgs/Williams.svg",
+  "logo_chip": "",
+  "showroom_image": "assets/clients/williams/showroom.png",
+  "showroom_video": "assets/clients/williams/showroom.mp4",
+  "showroom_prompt": "A premium modern automotive dealership showroom exterior in the North West of England, expansive curved glass frontage, polished forecourt lined with clean luxury SUVs and saloons, soft overcast morning light, wet reflective paving, understated upmarket architecture, photoreal architectural automotive photography, muted palette of deep teal, warm amber and ink, no people, NO TEXT, NO LOGOS, NO BADGES, NO CAPTIONS.",
+  "showroom_motion_prompt": "Continue this exact scene in motion: a premium glass car dealership showroom at dusk with luxury cars parked on the wet forecourt. Keep the building and cars identical to the photo. Very slow, smooth cinematic camera push-in toward the lit glass frontage, soft reflections shimmering on the wet ground, calm premium mood. NO TEXT, NO CAPTIONS, NO new logos."
+}
