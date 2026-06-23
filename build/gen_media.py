@@ -87,11 +87,17 @@ def gen_image(out, prompt, model="nbpro", ar="16:9"):
     return out
 
 # ---------- VIDEO (Veo) ----------
-def gen_veo(out, prompt, ar="16:9", fast=False):
+def gen_veo(out, prompt, ar="16:9", fast=False, image=None):
     os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
     model = VEO_FAST if fast else VEO_MODEL
     url = f"{BASE}/models/{model}:predictLongRunning?key={KEY}"
-    payload = {"instances": [{"prompt": prompt}],
+    instance = {"prompt": prompt}
+    if image:  # image-to-video: animate a real photo as the first frame (keeps the actual subject)
+        img_bytes = open(image, "rb").read()
+        mt = "image/png" if image.lower().endswith(".png") else "image/jpeg"
+        instance["image"] = {"bytesBase64Encoded": base64.b64encode(img_bytes).decode(), "mimeType": mt}
+        print(f"  VEO using first-frame image: {os.path.basename(image)}")
+    payload = {"instances": [instance],
                "parameters": {"aspectRatio": ar}}
     op = post(url, payload)
     name = op["name"]
@@ -136,7 +142,7 @@ def main():
     if cmd == "image":
         gen_image(a[2], a[3], model=opt("--model", "nbpro"), ar=opt("--ar", "16:9"))
     elif cmd == "veo":
-        gen_veo(a[2], a[3], ar=opt("--ar", "16:9"), fast=("--fast" in a))
+        gen_veo(a[2], a[3], ar=opt("--ar", "16:9"), fast=("--fast" in a), image=opt("--image"))
     elif cmd == "batch":
         spec = json.load(open(a[2]))
         ok, fail = 0, 0
@@ -145,7 +151,7 @@ def main():
                 if item["type"] == "image":
                     gen_image(item["out"], item["prompt"], item.get("model", "nbpro"), item.get("ar", "16:9"))
                 elif item["type"] == "veo":
-                    gen_veo(item["out"], item["prompt"], item.get("ar", "16:9"), item.get("fast", False))
+                    gen_veo(item["out"], item["prompt"], item.get("ar", "16:9"), item.get("fast", False), item.get("image"))
                 ok += 1
             except Exception as e:
                 fail += 1

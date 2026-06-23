@@ -1,7 +1,7 @@
 [
-  {"type":"veo","out":"assets/video/veo_cover.mp4","ar":"16:9",
-   "prompt":"One continuous slow tracking shot moving alongside a deep gloss-blue sporty performance pickup truck as it tows a sleek enclosed twin-axle aluminium car-transport trailer along a quiet British motorway at blue hour. Smooth steady motion, wet tarmac reflections, distant city lights, gentle headlight glow, confident and premium mood. Photoreal cinematic automotive cinematography, muted palette of deep teal, warm amber and ink, no people, NO TEXT, NO CAPTIONS, NO LOGOS."},
+  {"type":"veo","out":"assets/video/veo_cover.mp4","ar":"16:9","image":"assets/gen/ph_cover.jpg",
+   "prompt":"Continue this exact scene in motion: the blue Ford Ranger MS-RT pickup tows the enclosed Brian James car-transport trailer along the motorway. Keep the truck and trailer identical to the photo. Subtle realistic forward driving motion, gentle camera tracking alongside, spray and motion blur on the wet road, overcast daylight, smooth and cinematic. NO TEXT, NO CAPTIONS, NO new logos."},
 
-  {"type":"veo","out":"assets/video/veo_moment.mp4","ar":"16:9","fast":true,
-   "prompt":"A slow push-in on hands tightening a wheel strap securing a car inside a fully enclosed transport trailer, warm directional light, shallow depth of field, calm and precise mood, photoreal cinematic detail cinematography, muted palette of deep teal and warm amber, NO TEXT, NO CAPTIONS, NO LOGOS."}
+  {"type":"veo","out":"assets/video/veo_showroom.mp4","ar":"16:9","image":"assets/gen/ph_showroom.png",
+   "prompt":"Continue this exact scene in motion: a premium glass car dealership showroom at dusk with luxury cars parked on the wet forecourt. Keep the building and cars identical to the photo. Very slow, smooth cinematic camera push-in toward the lit glass frontage, soft reflections shimmering on the wet ground, calm premium mood. NO TEXT, NO CAPTIONS, NO new logos."}
 ]

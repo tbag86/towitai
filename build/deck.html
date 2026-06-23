@@ -133,27 +133,9 @@ body.ui-light .sec-no{color:rgba(237,233,223,.8)}
 .chip.sm{height:50px;padding:9px 13px}.chip.sm img{height:23px}
 .chip.ink{background:var(--ink2);border-color:rgba(255,255,255,.10)}  /* for the white towit logo */
 
-/* tables */
-.tbl{width:100%;border-collapse:collapse;font-size:13px}
-.tbl td,.tbl th{padding:12px 15px;text-align:left;vertical-align:top;border-bottom:1px solid var(--hair)}
-.dark .tbl td,.dark .tbl th,.teal .tbl td,.teal .tbl th{border-color:var(--hair-d)}
-.tbl th{font-weight:700;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.tbl .who{font-weight:900;color:var(--ink);white-space:nowrap}
-.dark .tbl .who,.teal .tbl .who{color:#fff}
-.tbl tr:hover td{background:rgba(12,110,108,.04)}
-
-/* steps */
-.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;position:relative}
-.steps:before{content:"";position:absolute;top:21px;left:9%;right:9%;height:2px;background:var(--teal);opacity:.3}
-.step{position:relative;z-index:1}
-.step .n{font-weight:900;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
-  background:var(--teal);color:#fff;font-size:17px;margin-bottom:14px}
-.step h3{font-size:15px;margin-bottom:6px}.step p{font-size:12px;color:var(--muted);line-height:1.45}
-.teal .step p{color:#B7C0BD}.teal .step .n{background:#0a3f43;border:2px solid #6FD0CC}
-
 /* ticks */
-ul.tick{list-style:none;display:grid;gap:8px}
-ul.tick li{position:relative;padding-left:24px;font-size:13.2px;line-height:1.45;color:var(--muted);font-weight:400}
+ul.tick{list-style:none;display:grid;gap:10px}
+ul.tick li{position:relative;padding-left:24px;font-size:14px;line-height:1.45;color:var(--muted);font-weight:400}
 .dark ul.tick li,.teal ul.tick li{color:#C3CCC9}
 ul.tick li:before{content:"";position:absolute;left:0;top:4px;width:13px;height:13px;border-radius:3px;
   background:var(--teal)}
@@ -161,35 +143,23 @@ ul.cross li:before{background:var(--coral)}
 ul.tick li b,.lead b,.muted b{font-weight:700;color:inherit}
 .dark ul.tick li b{color:#fff}
 
-.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.two .box{border-radius:4px;padding:18px 20px;border:1px solid}
-.box.no{background:rgba(220,85,56,.08);border-color:rgba(220,85,56,.3)}
-.box.yes{background:rgba(44,140,91,.10);border-color:rgba(44,140,91,.35)}
-.box .h{font-weight:900;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:11px}
-.box.no .h{color:var(--coral)}.box.yes .h{color:#2C8C5B}
-
-.obj{display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}
-.obj .o{border-left:3px solid var(--coral);padding:2px 0 2px 13px}
-.obj .q{font-weight:900;font-size:13px;margin-bottom:3px}
-.obj .a{font-size:12px;color:var(--muted);line-height:1.42}.teal .obj .a{color:#B7C0BD}
-
 .asks{display:grid;gap:11px;max-width:none}
 .ask{display:grid;grid-template-columns:46px 1fr;gap:16px;align-items:start;
   background:rgba(255,255,255,.05);border:1px solid var(--hair-d);border-radius:4px;padding:14px 18px}
 .ask .n{font-weight:900;font-size:28px;color:#6FD0CC;line-height:1}
 .ask h3{font-size:15px;margin-bottom:3px}.ask p{font-size:12px;color:#B7C0BD;line-height:1.4}
 
-.pill{display:inline-flex;align-items:center;gap:7px;padding:6px 13px;border-radius:3px;font-size:11px;font-weight:700;
+.pill{display:inline-flex;align-items:center;gap:7px;padding:8px 15px;border-radius:3px;font-size:12px;font-weight:700;
   letter-spacing:.06em;text-transform:uppercase;background:#FBF9F4;color:var(--teal);border:1px solid var(--hair)}
 small.note{font-size:10.5px;color:var(--muted2);line-height:1.4;display:block;font-weight:400}
 .tag{font-weight:700;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal)}
 .teal .tag,.dark .tag{color:#6FD0CC}
-@media (max-width:900px){.split,.split.img-r{grid-template-columns:1fr}.c3,.c4,.c5,.steps,.obj,.two{grid-template-columns:1fr 1fr}}
+@media (max-width:900px){.split,.split.img-r{grid-template-columns:1fr}.c2{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="topbar"><i id="bar"></i></div>
-<div class="sec-no" id="secno"><b>01</b> / 17</div>
+<div class="sec-no" id="secno"><b>01</b> / 04</div>
 <div class="foot">
   <span id="footname">Williams Group · towit.ai</span>
   <div class="nav" id="nav"></div>
@@ -198,10 +168,12 @@ small.note{font-size:10.5px;color:var(--muted2);line-height:1.4;display:block;fo
 
 <div class="deck" id="deck">
 
-<!-- 1 — COVER · full-bleed background + lockup.  Swap the <img> for a Veo <video> — see CLAUDE.md "Media". -->
+<!-- 1 — COVER · full-bleed video of the Ford Ranger MS-RT + Brian James Race Transporter 7 -->
 <section class="slide dark" data-name="Cover">
   <div class="bg">
-    <img src="assets/gen/ph_cover.jpg" alt="">
+    <video autoplay muted loop playsinline preload="auto"
+           poster="assets/gen/ph_cover.jpg" data-fallback="assets/gen/ph_cover.jpg">
+      <source src="assets/video/veo_cover.mp4" type="video/mp4"></video>
     <div class="grade"></div><div class="grain"></div>
   </div>
   <div class="scrim l"></div>
@@ -210,7 +182,7 @@ small.note{font-size:10.5px;color:var(--muted2);line-height:1.4;display:block;fo
   <div class="wrap">
     <div class="r kick">Prepared for Williams Group · towit.ai</div>
     <h1 class="r d1" style="margin:20px 0 14px">Vehicle transport,<br>handled properly.</h1>
-    <p class="r d2" style="font-size:clamp(15px,1.6vw,24px);color:#EDE9DF;max-width:38ch;font-weight:300">
+    <p class="r d2" style="font-size:clamp(15px,1.6vw,24px);color:#EDE9DF;max-width:40ch;font-weight:300">
       Same-day collection, instant WhatsApp quotes, <b style="font-weight:900;color:#6FD0CC">UK-wide</b> — the right trailer for every car.</p>
     <div class="r d3" style="margin:28px 0 20px">
       <div class="tag" style="margin-bottom:11px">A proposal for</div>
@@ -220,59 +192,41 @@ small.note{font-size:10.5px;color:var(--muted2);line-height:1.4;display:block;fo
       </div>
     </div>
     <div class="r d4 muted" style="color:#C3C8C2;font-size:12.5px;font-weight:700;letter-spacing:.04em">
-      Williams Group · June 2026</div>
+      Ford Ranger MS-RT · Brian James Race Transporter 7 · June 2026</div>
   </div>
 </section>
 
-<!-- 2 — SPLIT (text + photo) · the workhorse content layout -->
-<section class="slide" data-name="The proposition">
+<!-- 2 — THE OFFER · how towit works for dealers + dealership video -->
+<section class="slide" data-name="The offer">
   <div class="wrap split img-r">
     <div>
-      <div class="r kick">The proposition</div>
+      <div class="r kick">Why towit</div>
       <h2 class="r d1" style="margin:16px 0 16px">Transport that moves<br>at dealer speed.</h2>
-      <p class="r d2 lead">We move cars for the motor trade UK-wide — quoted in seconds on WhatsApp, collected the same day, in the right trailer for the job.</p>
-      <p class="r d3 lead" style="margin-top:13px;color:var(--ink)"><b>The ask:</b> a 20-minute conversation about how Williams moves its vehicles.</p>
-      <div class="r d4 cols c2" style="gap:11px;margin-top:22px">
-        <div class="card"><div class="num">01</div><h3>Instant quotes</h3><p>Send the job on WhatsApp, get a price straight back.</p></div>
-        <div class="card"><div class="num">02</div><h3>Same-day collection</h3><p>When stock needs to move now, we move it.</p></div>
-        <div class="card"><div class="num">03</div><h3>UK-wide drivers</h3><p>A national network — wherever your stock needs to go.</p></div>
-        <div class="card"><div class="num">04</div><h3>Fully insured</h3><p>Competitive rates, full cover, the right trailer every time.</p></div>
-      </div>
+      <p class="r d2 lead">We move cars for the trade UK-wide — quoted in seconds on WhatsApp, collected the same day, in the right trailer for the job.</p>
+      <ul class="r d3 tick" style="margin-top:18px">
+        <li><b>Instant WhatsApp quotes</b> — a price straight back, no phone tag.</li>
+        <li><b>Same-day collection, UK-wide drivers</b> — wherever your stock is.</li>
+        <li><b>Enclosed or open</b> — prestige and EV protected; volume moved efficiently.</li>
+        <li><b>Fully insured</b> — total cover at very competitive rates.</li>
+      </ul>
+      <p class="r d4 lead" style="margin-top:16px;color:var(--ink)"><b>The ask:</b> a 20-minute conversation about how Williams moves its vehicles.</p>
     </div>
-    <div class="r d2 photo ar43" style="height:78vh;max-height:80vh">
-      <img src="assets/gen/ph_loading.jpg" alt="">
+    <div class="r d2 photo ar43" style="width:100%">
+      <video autoplay muted loop playsinline preload="auto"
+             poster="assets/gen/ph_showroom.png" data-fallback="assets/gen/ph_showroom.png">
+        <source src="assets/video/veo_showroom.mp4" type="video/mp4"></video>
       <div class="grade"></div><div class="grain"></div>
-      <div class="cap"><b>Enclosed</b> &nbsp;Race Transporter 7 · towit.ai fleet</div>
+      <div class="cap"><b>Showroom</b> &nbsp;Indicative visualisation</div>
     </div>
   </div>
 </section>
 
-<!-- 3 — STAT GRID + photo · big editorial numbers (count-up via data-count) -->
-<section class="slide" data-name="The case">
-  <div class="wrap">
-    <div class="r kick">The case</div>
-    <h2 class="r d1" style="margin:14px 0 6px">Williams moves a lot<br>of valuable metal.</h2>
-    <div class="split img-r" style="margin-top:18px;align-items:stretch;gap:3vw">
-      <div class="r d2 cols c3" style="gap:22px;align-content:center">
-        <div><div class="statrule"></div><div class="stat" data-count="14">0</div><div class="statlbl">Showrooms across the North West generating stock moves.</div></div>
-        <div><div class="statrule"></div><div class="stat coral" data-count="5">0</div><div class="statlbl">Towns — Manchester, Bolton, Liverpool, Rochdale, Stockport.</div></div>
-        <div><div class="statrule"></div><div class="stat" data-count="115">0</div><div class="statlbl">Years of Williams quality to protect, since 1909.</div></div>
-      </div>
-      <div class="r d3 photo ar43" style="min-height:54vh">
-        <img src="assets/gen/ph_showroom.png" alt="">
-        <div class="grade"></div><div class="grain"></div>
-        <div class="cap"><b>Context</b> &nbsp;Premium showroom — indicative visualisation</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 4 — BEFORE / AFTER · two photos side by side -->
-<section class="slide dark" data-name="Two trailers">
+<!-- 3 — THE KIT · the two Brian James trailers (real fleet photos) -->
+<section class="slide dark" data-name="The kit">
   <div class="wrap">
     <div class="r kick">The kit</div>
-    <h2 class="r d1" style="margin:14px 0 6px">Two trailers. The right<br>one for every job.</h2>
-    <p class="r d1 lead" style="margin:0 0 18px;color:#C3C8C2">Both towed by our blue Ford Ranger MS-RT — purpose-built Brian James units, not a generic car carrier.</p>
+    <h2 class="r d1" style="margin:14px 0 6px">Two trailers. The right<br>one for every car.</h2>
+    <p class="r d1 lead" style="margin:0 0 18px;color:#C3C8C2">Both towed by our blue Ford Ranger MS-RT — purpose-built Brian James units, not a generic carrier.</p>
     <div class="r d2 cols c2" style="gap:20px">
       <div class="photo ar16"><img src="assets/gen/ph_enclosed.jpg" alt=""><div class="grade"></div><div class="grain"></div><div class="cap"><b>Enclosed</b> &nbsp;Brian James Race Transporter 7 — prestige, EV, performance</div></div>
       <div class="photo ar16"><img src="assets/gen/ph_open.jpg" alt=""><div class="grade"></div><div class="grain"></div><div class="cap"><b>Open</b> &nbsp;Brian James T Transporter — volume dealer stock</div></div>
@@ -280,212 +234,26 @@ small.note{font-size:10.5px;color:var(--muted2);line-height:1.4;display:block;fo
   </div>
 </section>
 
-<!-- 5 — STEPS · numbered horizontal process -->
-<section class="slide teal" data-name="How it works">
-  <div class="wrap">
-    <div class="r kick">How it works</div>
-    <h2 class="r d1" style="margin:14px 0 26px">Simple to book, safe<br>end to end.</h2>
-    <div class="r d2 steps">
-      <div class="step"><div class="n">1</div><h3>WhatsApp</h3><p>Send the vehicle and route — get an instant quote back.</p></div>
-      <div class="step"><div class="n">2</div><h3>Same-day</h3><p>A local driver collects, often the very same day.</p></div>
-      <div class="step"><div class="n">3</div><h3>Secured</h3><p>Strapped and loaded — fully enclosed when it matters.</p></div>
-      <div class="step"><div class="n">4</div><h3>Insured transit</h3><p>Tracked, fully insured, with one point of contact.</p></div>
-      <div class="step"><div class="n">5</div><h3>Delivered</h3><p>Clean and ready to hand over to the customer.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 6 — TICK LIST + photo · benefits -->
-<section class="slide" data-name="Why it matters">
-  <div class="wrap split">
-    <div class="r d1 photo ar43" style="width:100%">
-      <img src="assets/gen/ph_classic.jpg" alt=""><div class="grade"></div><div class="grain"></div>
-      <div class="cap"><b>Enclosed</b> &nbsp;Race Transporter 7 · towit.ai fleet</div>
-    </div>
-    <div>
-      <div class="r kick">Why it matters</div>
-      <h2 class="r d1" style="margin:16px 0 18px">What Williams gets<br>out of it.</h2>
-      <ul class="r d2 tick">
-        <li><b>Quote in seconds</b> — WhatsApp the job, get a competitive price straight back.</li>
-        <li><b>Move it today</b> — same-day collection when stock can't wait.</li>
-        <li><b>Prestige protected</b> — enclosed transport shields paint, alloys and EV components.</li>
-        <li><b>Staff stay selling</b> — no salespeople driving stock; everything fully insured.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- 7 — TEAM / PARTNERS · c5 cards each with a logo chip (centrepiece pattern) -->
-<section class="slide dark" data-name="Built for prestige">
-  <div class="wrap">
-    <div class="r kick">The set-up</div>
-    <h2 class="r d1" style="margin:14px 0 8px">Built for prestige stock.</h2>
-    <p class="r d2 lead" style="margin-bottom:22px;max-width:60ch">A specialist set-up, not a general haulier — purpose-chosen vehicle and trailers, run round the clock.</p>
-    <div class="r d3 cols c4">
-      <div class="card"><div class="num">01</div><h3>Ford Ranger MS-RT</h3><p>A sharp, well-kept tow vehicle that turns up looking the part.</p></div>
-      <div class="card"><div class="num">02</div><h3>Race Transporter 7</h3><p>Brian James enclosed unit — low-angle loading, climate-safe.</p></div>
-      <div class="card"><div class="num">03</div><h3>T Transporter</h3><p>Brian James open trailer for efficient, everyday stock moves.</p></div>
-      <div class="card"><div class="num">04</div><h3>UK-wide network</h3><p>Drivers across the country — same-day collection nationwide.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 8 — TABLE · who does what -->
-<section class="slide" data-name="What we move">
-  <div class="wrap">
-    <div class="r kick">What we move</div>
-    <h2 class="r d1" style="margin:14px 0 18px">Matched to the vehicle.</h2>
-    <table class="r d2 tbl">
-      <tr><th>Vehicle</th><th>Trailer</th><th>Why</th></tr>
-      <tr><td class="who">New BMW i &amp; EVs</td><td>Enclosed — Race Transporter 7</td><td>Paint and charging components shielded from road and weather.</td></tr>
-      <tr><td class="who">JLR &amp; BMW M performance</td><td>Enclosed — Race Transporter 7</td><td>Low-angle loading protects splitters, low ground clearance and finish.</td></tr>
-      <tr><td class="who">Volume used stock</td><td>Open — T Transporter</td><td>Efficient, cost-effective moves between showrooms and compounds.</td></tr>
-      <tr><td class="who">Auction &amp; trade buys</td><td>Enclosed or open</td><td>Collected nationwide and delivered ready to retail.</td></tr>
-    </table>
-  </div>
-</section>
-
-<!-- 9 — DELIVERY MODEL · c5 numbered cards -->
-<section class="slide" data-name="Working together">
-  <div class="wrap">
-    <div class="r kick">Working together</div>
-    <h2 class="r d1" style="margin:14px 0 20px">Easy to start, easy to scale.</h2>
-    <div class="r d2 cols c5">
-      <div class="card"><div class="num">01</div><h3>Say hello</h3><p>20 minutes to understand your routes and volumes.</p></div>
-      <div class="card"><div class="num">02</div><h3>Trial collection</h3><p>One real job to prove the service, no commitment.</p></div>
-      <div class="card"><div class="num">03</div><h3>Agree rates</h3><p>Competitive pricing and lead times set up front.</p></div>
-      <div class="card"><div class="num">04</div><h3>Book on WhatsApp</h3><p>Instant quotes, same-day collection, fully tracked.</p></div>
-      <div class="card"><div class="num">05</div><h3>Review</h3><p>Regular check-ins to flex capacity around your peaks.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 10 — THE ASK · teal slide, .asks list -->
-<section class="slide teal" data-name="The ask">
-  <div class="wrap split">
-    <div>
-      <div class="r kick">The ask</div>
-      <h2 class="r d1" style="margin:16px 0 14px">All we're asking<br>for is a chat.</h2>
-      <p class="r d2 lead">No tender, no switch, no commitment — just a short conversation to see if we're a fit.</p>
-      <div class="r d3" style="margin-top:20px"><div class="stat" data-count="20">0</div><div class="statlbl">Minutes — that's the whole ask.</div></div>
-    </div>
-    <div class="r d2 asks">
-      <div class="ask"><div class="n">1</div><div><h3>A short intro meeting</h3><p>In person at a showroom, or a quick call — your choice.</p></div></div>
-      <div class="ask"><div class="n">2</div><div><h3>Try one collection</h3><p>Give us a single real job to prove the service.</p></div></div>
-      <div class="ask"><div class="n">3</div><div><h3>A named contact</h3><p>Someone on the team we can coordinate stock moves with.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- 11 — VALUE · c4 stat cards -->
-<section class="slide dark" data-name="Why towit">
-  <div class="wrap">
-    <div class="r kick">Why towit</div>
-    <h2 class="r d1" style="margin:14px 0 22px">A specialist, not a haulier.</h2>
-    <div class="r d2 cols c4">
-      <div class="card"><h3 style="color:#6FD0CC;font-size:clamp(22px,2.2vw,30px);margin-bottom:9px">Instant</h3><p>WhatsApp quotes in seconds — not days waiting on a callback.</p></div>
-      <div class="card"><h3 style="color:#6FD0CC;font-size:clamp(22px,2.2vw,30px);margin-bottom:9px">Same-day</h3><p>Collection when stock can't wait, often within hours.</p></div>
-      <div class="card"><h3 style="color:#6FD0CC;font-size:clamp(22px,2.2vw,30px);margin-bottom:9px">UK-wide</h3><p>A national network of drivers — wherever your stock is.</p></div>
-      <div class="card"><h3 style="color:#6FD0CC;font-size:clamp(22px,2.2vw,30px);margin-bottom:9px">Fully insured</h3><p>Total cover at competitive rates, every single move.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 12 — CONTRAST · two boxes (problem / solution) -->
-<section class="slide" data-name="Why this works">
-  <div class="wrap">
-    <div class="r kick">Why this works</div>
-    <h2 class="r d1" style="margin:14px 0 18px">The difference it makes.</h2>
-    <div class="r d2 two">
-      <div class="box no"><div class="h">The usual way</div><ul class="tick cross"><li>Quotes that take days and phone tag.</li><li>Open-only transport risking paint and alloys.</li><li>Salespeople pulled off the floor to drive cars.</li><li>No cover certainty if something goes wrong.</li></ul></div>
-      <div class="box yes"><div class="h">With towit.ai</div><ul class="tick"><li>Instant WhatsApp quotes, same-day collection.</li><li>Enclosed protection for anything that matters.</li><li>UK-wide drivers — your team stays selling.</li><li>Fully insured, delivered clean and ready.</li></ul></div>
-    </div>
-  </div>
-</section>
-
-<!-- 13 — FULL-BLEED MOMENT · cinematic image, minimal text -->
-<section class="slide dark" data-name="The standard">
-  <div class="bg"><img src="assets/gen/ph_cover.jpg" alt=""><div class="grade"></div><div class="grain"></div></div>
-  <div class="scrim l"></div>
-  <div class="fcap">towit.ai fleet</div>
-  <div class="wrap" style="max-width:48%">
-    <div class="r kick">The standard</div>
-    <h2 class="r d1" style="margin:16px 0 14px">Every car, delivered<br>like it matters.</h2>
-    <p class="r d2 lead" style="color:#C3C8C2">Because the way a car arrives is the first thing your customer judges.</p>
-  </div>
-</section>
-
-<!-- 14 — ALIGNMENT TABLE · map to the audience's priorities -->
-<section class="slide" data-name="Alignment">
-  <div class="wrap">
-    <div class="r kick">Alignment</div>
-    <h2 class="r d1" style="margin:14px 0 18px">Built around "the<br>difference is Williams".</h2>
-    <table class="r d2 tbl">
-      <tr><th>What Williams cares about</th><th>How towit delivers it</th></tr>
-      <tr><td class="who">Brand reputation</td><td>Enclosed transport and a smart, well-presented set-up that reflects on you.</td></tr>
-      <tr><td class="who">Customer experience</td><td>Cars arrive clean, on time and ready for a faultless handover.</td></tr>
-      <tr><td class="who">Speed &amp; flexibility</td><td>Instant WhatsApp quotes, same-day collection, UK-wide drivers.</td></tr>
-      <tr><td class="who">Efficiency &amp; cost</td><td>Competitive, fully-insured rates; staff stay selling, not driving.</td></tr>
-      <tr><td class="who">Prestige &amp; EV care</td><td>Climate-safe enclosed carriage protects finish and components.</td></tr>
-    </table>
-  </div>
-</section>
-
-<!-- 15 — OBJECTIONS · q/a grid -->
-<section class="slide teal" data-name="Risk">
-  <div class="wrap">
-    <div class="r kick">Risk &amp; objections</div>
-    <h2 class="r d1" style="margin:14px 0 20px">The fair questions, answered.</h2>
-    <div class="r d2 obj">
-      <div class="o"><div class="q">"We already have a carrier."</div><div class="a">Keep them — try us on WhatsApp for the urgent and prestige jobs they can't cover.</div></div>
-      <div class="o"><div class="q">"Is it more expensive?"</div><div class="a">Very competitive rates — open for volume, enclosed only where it's worth it.</div></div>
-      <div class="o"><div class="q">"What about insurance and liability?"</div><div class="a">Every move is fully insured with clear cover, documented up front.</div></div>
-      <div class="o"><div class="q">"Can you reach everywhere we need?"</div><div class="a">Yes — a UK-wide driver network with same-day collection nationwide.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- 16 — NEXT STEPS / CLOSE · teal, asks + pill -->
+<!-- 4 — THE ASK · close + contact -->
 <section class="slide teal" data-name="Next steps">
   <div class="wrap split img-r">
     <div>
       <div class="r kick">Next steps</div>
-      <h2 class="r d1" style="margin:16px 0 14px">Where we go<br>from here.</h2>
+      <h2 class="r d1" style="margin:16px 0 14px">Let's move<br>your stock.</h2>
       <div class="r d2 asks" style="margin-top:8px">
-        <div class="ask"><div class="n">1</div><div><h3>Book a 20-minute intro</h3><p>A showroom visit or a quick call this month.</p></div></div>
-        <div class="ask"><div class="n">2</div><div><h3>Save us on WhatsApp</h3><p>Send a test job and see the quote come straight back.</p></div></div>
+        <div class="ask"><div class="n">1</div><div><h3>Book a 20-minute intro</h3><p>A quick call or a visit to one of your showrooms.</p></div></div>
+        <div class="ask"><div class="n">2</div><div><h3>Save us on WhatsApp</h3><p>Send a test job and watch the quote come straight back.</p></div></div>
         <div class="ask"><div class="n">3</div><div><h3>Try a trial collection</h3><p>One real move, fully insured, no commitment.</p></div></div>
-        <div class="ask"><div class="n">4</div><div><h3>Roll it out</h3><p>Scale across showrooms at your own pace.</p></div></div>
       </div>
-      <div class="r d3" style="margin-top:18px"><span class="pill">WhatsApp 0161 524 8428 · hello@towit.ai</span></div>
-    </div>
-    <div class="r d2 photo ar43" style="height:70vh"><img src="assets/gen/ph_loading.jpg" alt=""><div class="grade"></div><div class="grain"></div><div class="cap"><b>towit.ai</b> &nbsp;Race Transporter 7 · enclosed</div></div>
-  </div>
-</section>
-
-<!-- 17 — SOURCES & ASSUMPTIONS · transparency table + small lockup + note -->
-<section class="slide" data-name="Sources &amp; assumptions">
-  <div class="wrap">
-    <div class="r kick">Transparency — sources &amp; assumptions</div>
-    <h2 class="r d1" style="margin:14px 0 18px">Where the figures come from.</h2>
-    <div class="split" style="gap:3vw;align-items:start">
-      <table class="r d2 tbl">
-        <tr><th>Figure</th><th>Used</th><th>Basis</th></tr>
-        <tr><td>Williams showrooms</td><td class="who">14</td><td>williamsgroup.co.uk, June 2026.</td></tr>
-        <tr><td>NW towns served</td><td class="who">5</td><td>Bolton, Liverpool, Manchester, Rochdale, Stockport.</td></tr>
-        <tr><td>Years established</td><td class="who">115</td><td>Williams founded 1909.</td></tr>
-        <tr><td>Trailer types</td><td class="who">2</td><td>Brian James Race Transporter 7 &amp; T Transporter.</td></tr>
-      </table>
-      <div class="r d3">
-        <p class="muted" style="font-size:13px;line-height:1.55;margin-bottom:16px">Williams figures are from public sources. Vehicle and trailer photos are towit.ai's own fleet imagery; only the showroom render is an indicative visualisation.</p>
-        <div class="tag" style="margin:16px 0 11px">Prepared by · for</div>
-        <div class="lockup">
-          <span class="chip sm ink"><img src="assets/logos/logo_towit.png" alt="towit.ai"></span>
-          <span class="chip sm"><img src="assets/logos/logo_williams.svg" alt="Williams Group"></span>
-        </div>
-        <small class="note" style="margin-top:13px">towit.ai · Kimada House, Urmston, Manchester M41 6QT · WhatsApp 0161 524 8428 · hello@towit.ai. Vehicle and trailer marques referenced are the property of their respective owners.</small>
+      <div class="r d3" style="margin-top:18px;display:flex;gap:11px;align-items:center;flex-wrap:wrap">
+        <span class="pill">WhatsApp 0161 524 8428 · hello@towit.ai</span>
+      </div>
+      <div class="r d4 lockup" style="margin-top:18px">
+        <span class="chip ink sm"><img src="assets/logos/logo_towit.png" alt="towit.ai"></span>
+        <span class="chip sm"><img src="assets/logos/logo_williams.svg" alt="Williams Group"></span>
       </div>
     </div>
+    <div class="r d2 photo ar43" style="width:100%"><img src="assets/gen/ph_loading.jpg" alt=""><div class="grade"></div><div class="grain"></div><div class="cap"><b>towit.ai</b> &nbsp;Race Transporter 7 · enclosed</div></div>
   </div>
 </section>
 
@@ -530,6 +298,7 @@ let ty=null;window.addEventListener('touchstart',e=>ty=e.touches[0].clientY,{pas
 window.addEventListener('touchend',e=>{if(ty===null)return;const dy=ty-e.changedTouches[0].clientY;
   if(Math.abs(dy)>50)go(i+(dy>0?1:-1));ty=null;},{passive:true});
 slides[0].classList.add('is-active');dots[0].classList.add('on');countUp(slides[0]);
+slides[0].querySelectorAll('video').forEach(v=>v.play().catch(()=>{}));
 document.body.classList.toggle('ui-light',slides[0].classList.contains('dark')||slides[0].classList.contains('teal'));
 </script>
 </body>
