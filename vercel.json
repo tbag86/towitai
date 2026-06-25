@@ -5,6 +5,14 @@
       "destination": "/site/williams/index.html"
     },
     {
+      "source": "/genexxo",
+      "destination": "/site/genexxo/index.html"
+    },
+    {
+      "source": "/genexxo/",
+      "destination": "/site/genexxo/index.html"
+    },
+    {
       "source": "/williams",
       "destination": "/site/williams/index.html"
     },

@@ -1,0 +1,13 @@
+[
+  {"type":"veo","out":"assets/genexxo/veo_cover.mp4","ar":"16:9","fast":true,"image":"assets/genexxo/ph_cover.png",
+   "prompt":"Continue this exact scene in motion: scattered points of light drift and swirl slowly inward, resolving into the ordered luminous lattice around the bright central core; a gentle, slow camera push-in, particles twinkling, soft volumetric light breathing. Keep the palette and composition identical to the image. Slow, smooth, hypnotic, cinematic. NO TEXT, NO CAPTIONS, NO new logos."},
+
+  {"type":"veo","out":"assets/genexxo/veo_namespace.mp4","ar":"16:9","fast":true,"image":"assets/genexxo/ph_namespace.png",
+   "prompt":"Continue this exact scene in motion: a slow, smooth forward flight deeper through the infinite lattice of glowing gateways, nodes drifting past the camera, light filaments shimmering, subtle parallax depth. Keep the palette and structure identical to the image. Slow, elegant, cinematic. NO TEXT, NO CAPTIONS, NO new logos."},
+
+  {"type":"veo","out":"assets/genexxo/veo_agents.mp4","ar":"16:9","fast":true,"image":"assets/genexxo/ph_agents.png",
+   "prompt":"Continue this exact scene in motion: luminous streams of light flow continuously through the bright central hub and out to the gateways, pulsing gently, the core glowing and breathing with energy. Keep the palette and composition identical to the image. Slow, smooth, cinematic. NO TEXT, NO CAPTIONS, NO new logos."},
+
+  {"type":"veo","out":"assets/genexxo/veo_close.mp4","ar":"16:9","fast":true,"image":"assets/genexxo/ph_close.png",
+   "prompt":"Continue this exact scene in motion: the central point ignites and blooms outward into a radiant supernova burst, energy and glowing embers expanding gracefully outward then gently settling. Keep the palette identical to the image. Slow, dramatic, uplifting, cinematic. NO TEXT, NO CAPTIONS, NO new logos."}
+]

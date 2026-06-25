@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GENEXXO · Investor Overview · £2m Raise — strictly private &amp; confidential</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0A0A0F; --bg2:#101019; --panel:#16161E;
+  --red:#E84D3A; --red-l:#FF6B4A; --blue:#4A6CF7; --blue-l:#7C97FF; --purple:#8B5CF6;
+  --gold:#F59E0B; --green:#10B981; --cyan:#06B6D4;
+  --ink:#F3F3F8; --ink-d:#0C0C12;
+  --muted:#9394A5; --muted2:#62637A;
+  --hair:rgba(255,255,255,.12); --hair-s:rgba(255,255,255,.07);
+  --paper:#F4F3F6; --paper-ink:#16161E; --paper-muted:#5E5F72; --paper-hair:#E3E1E8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--ink-d);color:var(--ink);
+  overflow:hidden;-webkit-font-smoothing:antialiased;font-weight:400}
+
+/* grain texture used across photos & panels */
+:root{--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E")}
+
+.deck{position:fixed;inset:0;overflow:hidden}
+.slide{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;
+  padding:8vh 6.6vw 9vh;opacity:0;visibility:hidden;transform:translateY(14px);
+  transition:opacity .6s ease,transform .7s cubic-bezier(.2,.7,.2,1),visibility .6s;
+  background:radial-gradient(120% 120% at 80% 0%,#14141f 0%,var(--bg) 55%)}
+.slide.is-active{opacity:1;visibility:visible;transform:none}
+.slide.light{background:var(--paper);color:var(--paper-ink)}
+
+/* subtle grain on every slide */
+.slide:before{content:"";position:absolute;inset:0;background-image:var(--grain);
+  background-size:180px;opacity:.045;pointer-events:none;z-index:0}
+.slide.light:before{mix-blend-mode:multiply;opacity:.05}
+
+/* ---------- reveal ---------- */
+.r{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.is-active .r{opacity:1;transform:none}
+.is-active .r{transition-delay:.08s}
+.is-active .d1{transition-delay:.16s}.is-active .d2{transition-delay:.26s}
+.is-active .d3{transition-delay:.36s}.is-active .d4{transition-delay:.46s}
+.is-active .d5{transition-delay:.56s}.is-active .d6{transition-delay:.66s}
+
+/* ---------- type ---------- */
+.kick{font-family:'JetBrains Mono',monospace;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  font-size:clamp(10px,.76vw,12px);color:var(--red);display:inline-flex;align-items:center;gap:12px}
+.kick:after{content:"";width:42px;height:2px;background:var(--red);display:inline-block}
+.light .kick{color:var(--red)}
+h1{font-weight:800;line-height:.98;letter-spacing:-.03em;font-size:clamp(38px,6vw,92px);text-transform:none}
+h2{font-weight:800;line-height:1.0;letter-spacing:-.025em;font-size:clamp(28px,4vw,60px)}
+h3{font-weight:700;font-size:clamp(16px,1.4vw,21px);line-height:1.12;letter-spacing:-.01em}
+p.lead{font-size:clamp(14px,1.2vw,19px);line-height:1.55;color:var(--muted);max-width:46ch;font-weight:400}
+.light p.lead{color:var(--paper-muted)}
+.muted{color:var(--muted)}
+.redtx{color:var(--red)}.bluetx{color:var(--blue-l)}.light .bluetx{color:var(--blue)}
+.wrap{position:relative;z-index:3;width:100%}
+.mono{font-family:'JetBrains Mono',monospace;letter-spacing:-.01em}
+
+/* GENEXXO wordmark (text, brand-faithful — XX in red/blue) */
+.gx{font-family:'Plus Jakarta Sans';font-weight:800;letter-spacing:-.02em;color:var(--ink);white-space:nowrap}
+.light .gx{color:var(--paper-ink)}
+.gx .x1{color:var(--red)}.gx .x2{color:var(--blue)}
+
+/* ---------- photo treatment ---------- */
+.photo{position:relative;overflow:hidden;border-radius:4px;background:#0c0c14;
+  box-shadow:0 18px 50px -24px rgba(0,0,0,.8)}
+.photo img,.photo video{width:100%;height:100%;object-fit:cover;display:block;
+  filter:saturate(1.0) contrast(1.06) brightness(1.0)}
+.is-active .photo img,.is-active .photo video{animation:ken 18s ease-out both}
+@keyframes ken{from{transform:scale(1.06)}to{transform:scale(1)}}
+.photo .grade{position:absolute;inset:0;background:linear-gradient(150deg,rgba(232,77,58,.22),rgba(10,10,20,.08) 45%,rgba(74,108,247,.22));mix-blend-mode:screen}
+.photo .grain{position:absolute;inset:0;background-image:var(--grain);background-size:180px;opacity:.14;mix-blend-mode:overlay;pointer-events:none}
+.photo .cap{position:absolute;left:0;bottom:0;background:rgba(10,10,16,.82);color:var(--ink);
+  font-family:'JetBrains Mono',monospace;font-weight:500;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:7px 13px;border-top-right-radius:4px}
+.photo .cap b{color:var(--red-l);font-weight:600}
+
+/* full-bleed background video/photo */
+.bg{position:absolute;inset:0;overflow:hidden;z-index:0}
+.bg img,.bg video{width:100%;height:100%;object-fit:cover;filter:saturate(1.02) contrast(1.06)}
+.is-active .bg img{animation:ken 20s ease-out both}
+.bg .grain{position:absolute;inset:0;background-image:var(--grain);background-size:200px;opacity:.08}
+.bg .grade{position:absolute;inset:0;background:linear-gradient(150deg,rgba(10,10,20,.45),rgba(74,108,247,.10) 50%,rgba(232,77,58,.14))}
+.scrim{position:absolute;inset:0;z-index:1}
+.scrim.l{background:linear-gradient(90deg,rgba(8,8,14,.94) 0%,rgba(8,8,14,.78) 38%,rgba(8,8,14,.18) 100%)}
+.scrim.b{background:linear-gradient(0deg,rgba(6,6,11,.95) 6%,rgba(6,6,11,.34) 48%,rgba(6,6,11,.5) 100%)}
+.fcap{position:absolute;right:22px;bottom:54px;z-index:4;color:#8a8ca6;font-family:'JetBrains Mono',monospace;font-weight:500;font-size:9.5px;
+  letter-spacing:.16em;text-transform:uppercase;writing-mode:vertical-rl;transform:rotate(180deg)}
+
+/* ---------- chrome ---------- */
+.topbar{position:fixed;top:0;left:0;right:0;height:3px;z-index:60;background:rgba(255,255,255,.10)}
+.topbar>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--red),var(--blue));transition:width .5s ease}
+.foot{position:fixed;bottom:0;left:0;right:0;height:34px;z-index:55;display:flex;align-items:center;
+  justify-content:space-between;padding:0 22px;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.12em;
+  text-transform:uppercase;color:rgba(243,243,248,.55);transition:color .5s ease}
+body.on-light .foot{color:rgba(22,22,30,.55)}
+.foot .nav{display:flex;gap:6px}
+.foot .nav b{width:7px;height:7px;border-radius:50%;background:rgba(180,182,200,.4);cursor:pointer;transition:.3s}
+.foot .nav b.on{background:var(--red);width:20px;border-radius:4px}
+body.on-light .foot .nav b{background:rgba(22,22,30,.25)}
+body.on-light .foot .nav b.on{background:var(--red)}
+.sec-no{position:fixed;top:18px;right:24px;z-index:55;font-family:'JetBrains Mono',monospace;font-weight:600;font-size:11px;letter-spacing:.08em;
+  color:rgba(243,243,248,.6);transition:color .5s ease}
+body.on-light .sec-no{color:rgba(22,22,30,.6)}
+.sec-no b{color:var(--red)}
+
+/* ---------- layout helpers ---------- */
+.split{display:grid;grid-template-columns:1.02fr .98fr;gap:3.6vw;align-items:center}
+.split.img-r{grid-template-columns:1fr 1.04fr}
+.cols{display:grid;gap:18px}
+.c2{grid-template-columns:1fr 1fr}.c3{grid-template-columns:repeat(3,1fr)}
+.c4{grid-template-columns:repeat(4,1fr)}.c5{grid-template-columns:repeat(5,1fr)}
+.ar16{aspect-ratio:16/10}.ar11{aspect-ratio:1/1}.ar43{aspect-ratio:4/3}
+
+/* ---------- card ---------- */
+.card{background:rgba(255,255,255,.04);border:1px solid var(--hair);border-radius:6px;padding:18px 18px}
+.light .card{background:#fff;border-color:var(--paper-hair);box-shadow:0 10px 30px -20px rgba(0,0,0,.25)}
+.card .num{font-family:'JetBrains Mono',monospace;font-weight:600;color:var(--red);font-size:12px;letter-spacing:.08em;margin-bottom:9px}
+.card h3{margin-bottom:6px}.card p{font-size:13px;line-height:1.5;color:var(--muted);font-weight:400}
+.light .card p{color:var(--paper-muted)}
+
+/* stat */
+.stat{font-weight:800;line-height:.9;letter-spacing:-.035em;font-size:clamp(34px,5vw,80px);color:var(--ink)}
+.light .stat{color:var(--paper-ink)}
+.stat.red{color:var(--red)}.stat.blue{color:var(--blue)}
+.statlbl{font-size:12.5px;color:var(--muted);margin-top:9px;line-height:1.4;max-width:24ch;font-weight:400}
+.light .statlbl{color:var(--paper-muted)}
+.statrule{height:3px;width:38px;background:var(--red);margin-bottom:14px}
+
+/* chips / lockup / pills */
+.lockup{display:flex;gap:11px;flex-wrap:wrap;align-items:center}
+.chip{background:rgba(255,255,255,.05);border:1px solid var(--hair);border-radius:999px;padding:9px 16px;
+  font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.02em;color:var(--ink);display:inline-flex;align-items:center;gap:8px}
+.light .chip{background:#fff;border-color:var(--paper-hair);color:var(--paper-ink)}
+.chip .dot{width:7px;height:7px;border-radius:50%;background:var(--red)}
+.chip.b .dot{background:var(--blue)}.chip.p .dot{background:var(--purple)}.chip.g .dot{background:var(--green)}.chip.c .dot{background:var(--cyan)}.chip.go .dot{background:var(--gold)}
+
+/* monospace domain examples */
+.dom{display:inline-flex;gap:10px;flex-wrap:wrap}
+.dom span{font-family:'JetBrains Mono',monospace;font-size:clamp(13px,1.3vw,18px);font-weight:500;
+  background:rgba(255,255,255,.05);border:1px solid var(--hair);border-radius:5px;padding:8px 13px;color:var(--ink)}
+.dom .xx{color:var(--red)}.dom .xx2{color:var(--blue)}
+
+/* metric strip */
+.strip{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--hair);border-radius:8px;overflow:hidden;background:rgba(255,255,255,.03)}
+.strip>div{flex:1;min-width:130px;padding:16px 18px;border-right:1px solid var(--hair)}
+.strip>div:last-child{border-right:none}
+.strip .v{font-weight:800;font-size:clamp(22px,2.4vw,34px);letter-spacing:-.03em;line-height:1}
+.strip .k{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:7px}
+
+/* asks */
+.asks{display:grid;gap:11px}
+.ask{display:grid;grid-template-columns:46px 1fr;gap:16px;align-items:start;
+  background:rgba(255,255,255,.04);border:1px solid var(--hair);border-radius:6px;padding:14px 18px}
+.ask .n{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:24px;color:var(--red);line-height:1.1}
+.ask h3{font-size:15px;margin-bottom:3px}.ask p{font-size:12.5px;color:var(--muted);line-height:1.45}
+
+.pill{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:500;
+  letter-spacing:.04em;background:rgba(255,255,255,.05);color:var(--ink);border:1px solid var(--hair)}
+.light .pill{background:#fff;color:var(--paper-ink);border-color:var(--paper-hair)}
+small.note{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--muted2);line-height:1.5;display:block;font-weight:400;letter-spacing:.02em}
+.light small.note{color:var(--paper-muted)}
+.tag{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+@media (max-width:900px){.split,.split.img-r{grid-template-columns:1fr}.c2,.c4{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="topbar"><i id="bar"></i></div>
+<div class="sec-no" id="secno"><b>01</b> / 06</div>
+<div class="foot">
+  <span id="footname">Cover</span>
+  <div class="nav" id="nav"></div>
+  <span>Genexxo Vision Limited · Private &amp; Confidential</span>
+</div>
+
+<div class="deck" id="deck">
+
+<!-- 1 — COVER · full-bleed supernova video, chaos→order -->
+<section class="slide" data-name="Cover">
+  <div class="bg">
+    <video autoplay muted loop playsinline preload="auto"
+           poster="assets/genexxo/ph_cover.png" data-fallback="assets/genexxo/ph_cover.png">
+      <source src="assets/genexxo/veo_cover.mp4" type="video/mp4"></video>
+    <div class="grade"></div><div class="grain"></div>
+  </div>
+  <div class="scrim l"></div>
+  <div class="scrim b"></div>
+  <div class="fcap">GENEXXO · Supernova</div>
+  <div class="wrap">
+    <div class="r kick">Investor Overview · Strictly private &amp; confidential</div>
+    <div class="r d1 gx" style="font-size:clamp(26px,3vw,44px);margin:22px 0 18px">GENE<span class="x1">X</span><span class="x2">X</span>O</div>
+    <h1 class="r d2" style="margin:0 0 16px;max-width:18ch">The organising layer for the AI internet.</h1>
+    <p class="r d3" style="font-size:clamp(15px,1.6vw,23px);color:#E7E7F0;max-width:40ch;font-weight:300">
+      10,000 branded front doors. One namespace. <b style="font-weight:800;color:var(--red-l)">A £2m raise toward a strategic exit.</b></p>
+    <div class="r d4" style="margin-top:30px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#A9AAC0">
+      Genexxo Vision Limited · Isle of Man · <span id="cdate"></span></div>
+  </div>
+</section>
+
+<!-- 2 — THE SHIFT · creation is solved; organisation is the prize -->
+<section class="slide" data-name="The shift">
+  <div class="wrap">
+    <div class="r kick">Why now</div>
+    <h2 class="r d1" style="margin:16px 0 16px;max-width:20ch">Creation is solved.<br><span class="redtx">Organisation</span> is the next trillion-dollar war.</h2>
+    <p class="r d2 lead" style="max-width:60ch">AI is flooding the web with infinite content, agents and commerce. Making things is no longer the bottleneck — <b style="color:var(--ink);font-weight:700">finding</b> them is. Discovery is breaking, and the agents now doing the buying need a structured map of the world.</p>
+    <div class="r d3 cols c3" style="margin-top:34px">
+      <div><div class="statrule"></div><div class="stat red">$20.9<span style="font-size:.5em;font-weight:700">bn</span></div><div class="statlbl">AI-influenced retail spend forecast for 2026 — roughly <b style="color:var(--ink)">4×</b> the prior year.</div></div>
+      <div><div class="statrule" style="background:var(--blue)"></div><div class="stat blue">+<span data-count="805">0</span>%</div><div class="statlbl">Year-on-year growth in AI-referred retail traffic, peak 2025.</div></div>
+      <div><div class="statrule" style="background:var(--purple)"></div><div class="stat" style="color:var(--purple)"><span data-count="3">0</span></div><div class="statlbl">Agent-commerce rails now live: <b style="color:var(--ink)">ACP</b> · <b style="color:var(--ink)">UCP</b> · <b style="color:var(--ink)">MCP</b>.</div></div>
+    </div>
+    <p class="r d4 lead" style="margin-top:30px;max-width:54ch;font-size:clamp(16px,1.5vw,22px);color:var(--ink);font-weight:600">The rails are being laid. <span class="redtx">GENEXXO is the map.</span></p>
+    <small class="r d5 note" style="margin-top:14px">Industry estimates, 2025–26 (AI-commerce forecasts &amp; measured AI-referral traffic). Indicative of direction, not a GENEXXO projection.</small>
+  </div>
+</section>
+
+<!-- 3 — THE ASSET · the namespace, full-bleed flythrough -->
+<section class="slide" data-name="The asset">
+  <div class="bg">
+    <video autoplay muted loop playsinline preload="auto"
+           poster="assets/genexxo/ph_namespace.png" data-fallback="assets/genexxo/ph_namespace.png">
+      <source src="assets/genexxo/veo_namespace.mp4" type="video/mp4"></video>
+    <div class="grade"></div><div class="grain"></div>
+  </div>
+  <div class="scrim l"></div>
+  <div class="fcap">The GENEXXO Collection · indicative visualisation</div>
+  <div class="wrap" style="max-width:60%">
+    <div class="r kick">The asset</div>
+    <h2 class="r d1" style="margin:16px 0 18px">10,000 doors.<br>One key: <span class="mono" style="font-size:.8em">[word]<span style="color:var(--red)">X</span><span style="color:var(--blue)">X</span>.com</span></h2>
+    <div class="r d2 dom" style="margin-bottom:18px">
+      <span>Health<span class="xx">X</span><span class="xx2">X</span>.com</span>
+      <span>Finance<span class="xx">X</span><span class="xx2">X</span>.com</span>
+      <span>Fashion<span class="xx">X</span><span class="xx2">X</span>.com</span>
+    </div>
+    <p class="r d3 lead" style="max-width:48ch">One consistent convention across <b style="color:var(--ink);font-weight:700">45 sectors</b> and 400+ sub-categories, at 90–95% coverage each. Not a scattering of names — a coherent, brandable <b style="color:var(--ink);font-weight:700">semantic namespace</b>.</p>
+    <div class="r d4 strip" style="margin-top:26px;max-width:680px">
+      <div><div class="v" style="color:var(--red)">10,000+</div><div class="k">Premium .com domains</div></div>
+      <div><div class="v">45</div><div class="k">Sectors</div></div>
+      <div><div class="v">400+</div><div class="k">Sub-categories</div></div>
+      <div><div class="v" style="color:var(--blue-l)">14 yrs</div><div class="k">Assembled</div></div>
+    </div>
+    <p class="r d5 lead" style="margin-top:22px;color:var(--ink);font-weight:600;max-width:46ch">A linguistic moat that can't be re-assembled at any price.</p>
+  </div>
+</section>
+
+<!-- 4 — WHAT ONE DOOR IS WORTH · light inversion, comps -->
+<section class="slide light" data-name="The comparables">
+  <div class="wrap">
+    <div class="r kick">The comparables</div>
+    <h2 class="r d1" style="margin:16px 0 10px">One category. Tens of millions.</h2>
+    <p class="r d1 lead" style="margin-bottom:30px;max-width:58ch">A single category-defining <span class="mono" style="font-size:.92em">.com</span> has changed hands for life-changing sums. These are publicly reported sales:</p>
+    <div class="r d2 cols c4">
+      <div class="card"><div class="num">2014</div><div class="stat" style="font-size:clamp(30px,3.4vw,52px)">$872<span style="font-size:.42em;font-weight:700">M</span></div><h3 style="margin-top:8px">Cars.com</h3><p>The benchmark category gateway.</p></div>
+      <div class="card"><div class="num">2010</div><div class="stat" style="font-size:clamp(30px,3.4vw,52px)">$49.7<span style="font-size:.42em;font-weight:700">M</span></div><h3 style="margin-top:8px">CarInsurance.com</h3><p>Single sub-category, single buyer.</p></div>
+      <div class="card"><div class="num">2010</div><div class="stat" style="font-size:clamp(30px,3.4vw,52px)">$35.6<span style="font-size:.42em;font-weight:700">M</span></div><h3 style="margin-top:8px">Insurance.com</h3><p>Vertical front door.</p></div>
+      <div class="card"><div class="num">2019</div><div class="stat" style="font-size:clamp(30px,3.4vw,52px)">$30<span style="font-size:.42em;font-weight:700">M</span></div><h3 style="margin-top:8px">Voice.com</h3><p>One word, one platform.</p></div>
+    </div>
+    <p class="r d3 lead" style="margin-top:30px;max-width:62ch;color:var(--paper-ink);font-weight:600;font-size:clamp(16px,1.5vw,22px)">
+      Those are <span class="redtx">single doors</span>, sold one at a time. GENEXXO holds <span class="redtx">10,000</span> — under one roof, one clean corporate entity.</p>
+    <small class="r d4 note" style="margin-top:14px">Publicly reported domain sales. Shown to indicate category-gateway value; not a valuation of the GENEXXO Collection.</small>
+  </div>
+</section>
+
+<!-- 5 — THE MODEL + THE PRIZE · agents through the hub -->
+<section class="slide" data-name="Model &amp; prize">
+  <div class="bg">
+    <video autoplay muted loop playsinline preload="auto"
+           poster="assets/genexxo/ph_agents.png" data-fallback="assets/genexxo/ph_agents.png">
+      <source src="assets/genexxo/veo_agents.mp4" type="video/mp4"></video>
+    <div class="grade"></div><div class="grain"></div>
+  </div>
+  <div class="scrim l"></div>
+  <div class="fcap">Supernova hub · indicative visualisation</div>
+  <div class="wrap" style="max-width:62%">
+    <div class="r kick">The model · the prize</div>
+    <h2 class="r d1" style="margin:16px 0 16px">Supernova: the hub<br>the agents route through.</h2>
+    <p class="r d2 lead" style="max-width:50ch">A central, AI-guided hub linking specialised gateways for content, communities, commerce and agentic tools. Deliberately <b style="color:var(--ink);font-weight:700">asset-light</b> — GENEXXO facilitates and earns brand-zone and facilitation fees. No inventory. No logistics. Pure leverage.</p>
+    <div class="r d3" style="margin-top:24px">
+      <div class="tag" style="margin-bottom:12px">The natural acquirers</div>
+      <div class="lockup">
+        <span class="chip"><span class="dot"></span>Amazon</span>
+        <span class="chip b"><span class="dot"></span>Microsoft</span>
+        <span class="chip g"><span class="dot"></span>Google</span>
+        <span class="chip p"><span class="dot"></span>OpenAI</span>
+        <span class="chip c"><span class="dot"></span>Meta</span>
+        <span class="chip go"><span class="dot"></span>SpaceXAI</span>
+      </div>
+    </div>
+    <p class="r d4 lead" style="margin-top:26px;color:var(--ink);font-weight:600;max-width:44ch;font-size:clamp(16px,1.5vw,22px)">
+      Whoever owns the organising layer <span class="redtx">owns the agentic internet.</span></p>
+  </div>
+</section>
+
+<!-- 6 — THE ASK · the £2m exit roadmap, supernova close -->
+<section class="slide" data-name="The ask">
+  <div class="bg">
+    <video autoplay muted loop playsinline preload="auto"
+           poster="assets/genexxo/ph_close.png" data-fallback="assets/genexxo/ph_close.png">
+      <source src="assets/genexxo/veo_close.mp4" type="video/mp4"></video>
+    <div class="grade"></div><div class="grain"></div>
+  </div>
+  <div class="scrim l"></div>
+  <div class="scrim b"></div>
+  <div class="wrap split img-r" style="align-items:center">
+    <div>
+      <div class="r kick">The ask</div>
+      <h2 class="r d1" style="margin:16px 0 14px"><span class="redtx">£2m.</span><br>The exit roadmap.</h2>
+      <p class="r d2 lead" style="margin-bottom:18px;max-width:42ch">Weighted to the exit: de-risk the asset, build visibility and momentum, and move GENEXXO toward a strategic sale.</p>
+      <div class="r d3 asks">
+        <div class="ask"><div class="n">1</div><div><h3>De-risk &amp; document</h3><p>Progress the Supernova prototype and architecture; portfolio &amp; trademark management.</p></div></div>
+        <div class="ask"><div class="n">2</div><div><h3>Build momentum</h3><p>Retain a top-tier London tech-PR firm and a senior M&amp;A / exit strategist.</p></div></div>
+        <div class="ask"><div class="n">3</div><div><h3>Move to exit</h3><p>Roadshows, conferences and direct conversations with strategic acquirers.</p></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="r d2 gx" style="font-size:clamp(28px,3.4vw,52px);margin-bottom:18px">GENE<span class="x1">X</span><span class="x2">X</span>O</div>
+      <div class="r d3" style="display:flex;flex-direction:column;gap:11px;align-items:flex-start">
+        <span class="pill"><span style="width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block"></span>Advised by a founding partner of Keystone Law</span>
+        <span class="pill"><span style="width:7px;height:7px;border-radius:50%;background:var(--blue);display:inline-block"></span>Acquisition-grade data room ready</span>
+        <span class="pill"><span style="width:7px;height:7px;border-radius:50%;background:var(--red);display:inline-block"></span>genexxovision.com</span>
+      </div>
+      <small class="r d4 note" style="margin-top:18px">Strictly private &amp; confidential · Genexxo Vision Limited · Isle of Man</small>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script>
+const deck=document.getElementById('deck');
+const slides=[...deck.querySelectorAll('.slide')];
+const nav=document.getElementById('nav');const bar=document.getElementById('bar');
+const secno=document.getElementById('secno');const footname=document.getElementById('footname');
+let i=0,locked=false;
+slides.forEach((s,k)=>{const b=document.createElement('b');b.onclick=()=>go(k);nav.appendChild(b);});
+const dots=[...nav.children];
+function countUp(s){s.querySelectorAll('[data-count]').forEach(el=>{
+  const t=+el.dataset.count,dur=1100,t0=performance.now();
+  function tick(now){let p=Math.min(1,(now-t0)/dur);p=1-Math.pow(1-p,3);
+    el.textContent=Math.round(t*p).toLocaleString('en-GB');if(p<1)requestAnimationFrame(tick);}
+  requestAnimationFrame(tick);});}
+function theme(s){document.body.classList.toggle('on-light',s.classList.contains('light'));}
+function go(n){n=Math.max(0,Math.min(slides.length-1,n));if(n===i)return;
+  slides[i].classList.remove('is-active');i=n;slides[i].classList.add('is-active');
+  dots.forEach((d,k)=>d.classList.toggle('on',k===i));
+  bar.style.width=(i/(slides.length-1)*100)+'%';
+  secno.innerHTML='<b>'+String(i+1).padStart(2,'0')+'</b> / '+String(slides.length).padStart(2,'0');
+  footname.textContent=slides[i].dataset.name;
+  theme(slides[i]);
+  countUp(slides[i]);
+  slides.forEach(s=>s.querySelectorAll('video').forEach(v=>{if(s===slides[i]){v.play().catch(()=>{});}else{v.pause();}}));
+  locked=true;setTimeout(()=>locked=false,620);}
+deck.querySelectorAll('video').forEach(v=>{
+  function swap(){const f=v.dataset.fallback;if(!f||v.dataset.swapped)return;v.dataset.swapped=1;const img=new Image();img.src=f;
+    img.style.cssText='width:100%;height:100%;object-fit:cover;filter:saturate(1.02) contrast(1.06)';v.replaceWith(img);}
+  v.addEventListener('error',swap,true);
+  v.querySelectorAll('source').forEach(s=>s.addEventListener('error',()=>{if(!v.currentSrc)swap();}));});
+window.addEventListener('keydown',e=>{
+  if(['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key)){e.preventDefault();go(i+1);}
+  if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();go(i-1);}
+  if(e.key==='Home')go(0);if(e.key==='End')go(slides.length-1);
+  if(e.key==='f')document.documentElement.requestFullscreen?.();});
+let sc=0;window.addEventListener('wheel',e=>{if(locked)return;sc+=e.deltaY;
+  if(Math.abs(sc)>60){go(i+(sc>0?1:-1));sc=0;}},{passive:true});
+let ty=null;window.addEventListener('touchstart',e=>ty=e.touches[0].clientY,{passive:true});
+window.addEventListener('touchend',e=>{if(ty===null)return;const dy=ty-e.changedTouches[0].clientY;
+  if(Math.abs(dy)>50)go(i+(dy>0?1:-1));ty=null;},{passive:true});
+// cover date
+(function(){const d=new Date();document.getElementById('cdate').textContent=d.toLocaleDateString('en-GB',{month:'long',year:'numeric'});})();
+slides[0].classList.add('is-active');dots[0].classList.add('on');countUp(slides[0]);theme(slides[0]);
+slides[0].querySelectorAll('video').forEach(v=>v.play().catch(()=>{}));
+</script>
+</body>
+</html>

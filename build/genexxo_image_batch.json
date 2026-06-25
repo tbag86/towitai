@@ -1,0 +1,13 @@
+[
+  {"type":"image","out":"assets/genexxo/ph_cover.png","ar":"16:9",
+   "prompt":"An abstract cinematic visualisation of cosmic order emerging from chaos: thousands of tiny glowing particles and fragmented points of light swirling inward and resolving into one luminous, perfectly ordered constellation lattice around a brilliant central core, like a supernova becoming structure. Deep near-black navy space field, glowing nodes in electric blue and warm red-orange with subtle violet accents, soft volumetric light, fine particle bokeh, shallow cinematic depth of field, premium, elegant, minimal, photoreal high-end 3D render, NO TEXT, NO LOGOS, NO CAPTIONS."},
+
+  {"type":"image","out":"assets/genexxo/ph_namespace.png","ar":"16:9",
+   "prompt":"An abstract cinematic visualisation of an infinite three-dimensional lattice of glowing interconnected gateways and nodes, like an organised semantic galaxy of categories, a clean geometric grid receding into deep space, thin luminous filaments linking the nodes. Deep near-black navy field, nodes glowing electric blue and warm red-orange with violet accents, soft bokeh, gentle volumetric haze, premium, elegant, minimal, photoreal high-end 3D render, cinematic depth, NO TEXT, NO LOGOS, NO CAPTIONS."},
+
+  {"type":"image","out":"assets/genexxo/ph_agents.png","ar":"16:9",
+   "prompt":"An abstract cinematic visualisation of countless luminous streams of light flowing through a single radiant central hub and fanning out to many specialised gateways, like AI agents routing through one organising layer. Deep near-black navy field, glowing data streams in electric blue and warm red-orange with violet, a bright pulsing core, soft bokeh and volumetric light, premium, elegant, minimal, photoreal high-end 3D render, cinematic, NO TEXT, NO LOGOS, NO CAPTIONS."},
+
+  {"type":"image","out":"assets/genexxo/ph_close.png","ar":"16:9",
+   "prompt":"An abstract cinematic visualisation of a single point of light igniting into a brilliant supernova burst against deep near-black navy space, radiant energy blooming outward in electric blue and warm red-orange with violet, glowing embers and fine particle bokeh, dramatic and hopeful, premium, elegant, minimal, photoreal high-end 3D render, cinematic, NO TEXT, NO LOGOS, NO CAPTIONS."}
+]
